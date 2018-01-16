@@ -1,7 +1,5 @@
 # Sequential search in a linked list
 
-
-
 **Data Structure.** Maintain an \(unsorted\) linked list of key-value pairs.
 
 **Search.** Scan through all keys unitil find a match.
@@ -16,4 +14,8 @@
 | N | N | N/2 | N | no | equals\(\) |
 
 **Challenage.** Efficient implementions of both search and insert.
+
+---
+
+
 
