@@ -8,14 +8,23 @@
 
 **Performannce Summary.**
 
-| worst-case cost\(after N inserts\) |  | average-case\(after N random inserts\) |  | ordered iteration? | key interface |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| search | insert | search hit | insert |  |  |
-| N | N | N/2 | N | no | equals\(\) |
+| ST implementation | worst-case cost\(after N inserts\) |  | average-case\(after N random inserts\) |  | ordered iteration? | key interface |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|  | search | insert | search hit | insert |  |  |
+| sequential search\(unsorted list\) | N | N | N/2 | N | no | equals\(\) |
+| binary search\(orderde array\) | logN | N | logN | N/2 | yes | compareTo\(\) |
 
 **Challenage.** Efficient implementions of both search and insert.
 
----
+# Binary search in an ordered array
+
+**Data structure.** Maintain an ordered array of key-value pairs.
+
+**Rank helper function. **How many keys &lt; k?
+
+Binary search.
+
+Problem. To insert, need to shift all greater keys over.
 
 
 
