@@ -37,8 +37,9 @@ Case 1: \[1 childern\] Delete t by replacing parent link.
 
 Case 2: \[2 childern\]
 
-* Find successor x of t.
+* Find successor x of t. x has no left child.
 * Delete the minimun in t's right subteree.
+* Put x in t's spot.
 
 
 
