@@ -41,7 +41,7 @@ A BST such thar:
 * Every path from root to null link has the same number of black links.
 * Red links lean left.
 
-###### Key property. 
+###### Key property.
 
 1-1 correspondence between 2-3 and LLBB.
 
@@ -60,6 +60,25 @@ Orient a left-leaning red link to \(temporarily\) lean right. Maintains symmetri
 ###### Color filp. Invariants.
 
 Recolor to split a \(temporary\) 4-node. Maintains symmetric order and perfect black balance.
+
+#### Insertion in a LLRB tree: overview
+
+###### Basic strategy.
+
+Maintain 1-1 correspondence with 2-3 trees by applying elementary red-black BST operations.
+
+###### Warmup 1. 
+
+Insert into a tree with exactly 1 node.
+
+Case 1. 
+
+Insert into a 2-node at the bottom.
+
+* Do standard BST insert; color new link red.
+* If new red link is right link, rotate left.
+
+
 
 
 
