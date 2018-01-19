@@ -19,7 +19,7 @@ Every path from root to null link has same length.
 * Find interval containing search key.
 * Follow assciated link \(recursively\).
 
-Insertion into a 3-node at bottom.
+##### Insertion into a 3-node at bottom.
 
 * Add new key to 3-node to create temporary 4-node.
 * Move middle key in 4 node int parent.
@@ -41,7 +41,27 @@ A BST such thar:
 * Every path from root to null link has the same number of black links.
 * Red links lean left.
 
-###### Key property. 1-1 correspondence between 2-3 and LLBB.
+###### Key property. 
+
+1-1 correspondence between 2-3 and LLBB.
+
+###### Observation.
+
+Search is the same as for elementary BST \(ignore color\). Most other ops \(e.g., floor, iteration, selection\) are also identical.
+
+###### Left rotation.Invariants.
+
+Orient a \(temporarily\) right-leaning red link to lean left. Maintains symmetric order and perfect black balance.
+
+###### Right rotation.Invariants.
+
+Orient a left-leaning red link to \(temporarily\) lean right. Maintains symmetric order and perfect black balance.
+
+###### Color filp. Invariants.
+
+Recolor to split a \(temporary\) 4-node. Maintains symmetric order and perfect black balance.
+
+
 
 
 
