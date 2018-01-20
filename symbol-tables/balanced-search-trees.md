@@ -67,18 +67,36 @@ Recolor to split a \(temporary\) 4-node. Maintains symmetric order and perfect b
 
 Maintain 1-1 correspondence with 2-3 trees by applying elementary red-black BST operations.
 
-###### Warmup 1. 
+###### Warmup 1.
 
 Insert into a tree with exactly 1 node.
 
-Case 1. 
-
-Insert into a 2-node at the bottom.
+Case 1. Insert into a 2-node at the bottom.
 
 * Do standard BST insert; color new link red.
 * If new red link is right link, rotate left.
 
+总结：Case 1情况包括Warmup1情况。总是用红链接将新结点和它的父结点相连。如果只想新结点的是父结点的左链接（新结点比父结点小），那么父结点就直接成为一个3-结点；如果指向新结点的是父结点的右链接，这就是一个错误的3-结点，但一次坐旋转就能修正它。
 
+###### Warmup 2. Insert into a tree with exactly 2 nodes.
+
+Case 2. Insert into a 3-node at the bottom.
+
+这种情况可以分成三种子情况：新键小于树中的两个键，在两者之间，或者大于树中的两个键，每种情况都会产生一个连接到两条红链接的结点。
+
+总结：
+
+* Do standard BST insert; color new link red.
+* Rotate to balance the 4-node \(if needed\).
+* Flip colors to pass red link up one level.
+* Rotate to make lean left \(if needed\).
+* Repeat case 1 or case 2 up the tree \(if needed\).
+
+###### Same code for all cases.
+
+* Right child red, left child black: rotate left.
+* Left child, left-left grandchild red: rotate right.
+* Both children red: flip colors.
 
 
 
